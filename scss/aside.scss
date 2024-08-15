@@ -1,0 +1,145 @@
+@import "media";
+
+.aside {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  inset: 0;
+  background: #FFF;
+  padding: 36px 28px 76px;
+  width: 306px;
+  height: 100%;
+  z-index: 60;
+
+  @include media-breakpoint-down(lg) {
+    top: 0;
+    left: -100%;
+    padding: 36px 28px 30px;
+    transition: left 0.3s ease 0s;
+
+    &_active {
+      left: 0;
+
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin: 0 0 54px;
+
+
+    &-link {
+      font-weight: 600;
+      font-size: 26px;
+      letter-spacing: 0.01em;
+      color: #000;
+
+      img {
+        margin: 0 8px 0 0;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 10px;
+        letter-spacing: -0.01em;
+        color: #838383;
+        margin: 0 0 0 4px;
+      }
+    }
+
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+  }
+
+  &__menu {
+    &-item {
+      margin: 0 0 18px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      color: #9197b3;
+      padding: 11px 8px 11px 11px;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      transform-origin: left;
+      border-radius: 8px;
+
+
+
+
+      &_active {
+        border-radius: 8px;
+        background: #5932ea;
+        color: #FFFFFF;
+
+
+        svg {
+          fill: #FFFFFF;
+          stroke: #FFFFFF;
+
+          &:last-child {
+            fill: #FFFFFF;
+            stroke: #FFFFFF;
+          }
+        }
+      }
+
+    }
+
+    &-icon {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: 0 14px 0 0;
+      fill: none;
+      stroke: #9197B3;
+
+    }
+
+    &-arrow {
+      width: 16px;
+      height: 16px;
+      margin: 0 0 0 auto;
+      fill: #9197B3;
+      stroke: #9197B3;
+    }
+  }
+
+  &__flex {
+    flex: 1 1 auto;
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+
+    &-column {
+      margin: 0 0 0 12px;
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      color: #000;
+    }
+
+    &-role {
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.01em;
+      color: #757575;
+    }
+  }
+}

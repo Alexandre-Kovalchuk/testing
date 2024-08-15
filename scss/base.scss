@@ -1,0 +1,29 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #FAFBFF;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.container {
+  max-width: 998px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main {
+  flex: 1 1 auto;
+  position: relative;
+  padding: 0 0 0 320px;
+
+  @include media-breakpoint-down(lg){
+    padding: 0;
+  }
+}

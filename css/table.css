@@ -1,0 +1,130 @@
+.table {
+  width: 100%;
+  border-spacing: 0;
+}
+.table thead {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .table thead {
+    position: relative;
+    clip: auto;
+    height: 50px;
+    width: auto;
+    overflow: auto;
+  }
+}
+.table thead th {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #b5b7c0;
+}
+.table tbody,
+.table tr,
+.table th,
+.table td {
+  display: block;
+  padding: 0;
+  text-align: left;
+  white-space: normal;
+}
+@media (min-width: 768px) {
+  .table tr {
+    display: table-row;
+  }
+}
+.table th,
+.table td {
+  vertical-align: middle;
+}
+@media (min-width: 768px) {
+  .table th,
+  .table td {
+    display: table-cell;
+  }
+}
+@media (min-width: 768px) {
+  .table tbody {
+    display: table-row-group;
+  }
+}
+.table tbody tr {
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .table tbody tr {
+    display: table-row;
+    border-width: 1px;
+  }
+}
+.table tbody tr:last-of-type {
+  margin-bottom: 0;
+}
+.table tbody .table__td {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: #292d32;
+  border-bottom: 1px solid #eee;
+  padding: 18px 0;
+}
+@media (max-width: 767px) {
+  .table tbody .table__td {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+.table tbody .table__td_inactive {
+  text-align: center;
+}
+.table tbody .table__td_inactive span {
+  display: block;
+  width: 80px;
+  height: 29px;
+  border: 1px solid #df0404;
+  border-radius: 4px;
+  padding: 4px 0;
+  background: #ffc5c5;
+  color: #df0404;
+}
+@media (min-width: 768px) {
+  .table tbody .table__td_inactive span {
+    text-align: center;
+  }
+}
+.table tbody .table__td_active {
+  text-align: center;
+}
+.table tbody .table__td_active span {
+  display: block;
+  width: 80px;
+  height: 29px;
+  border: 1px solid #00b087;
+  border-radius: 4px;
+  padding: 4px 0;
+  background: rgba(22, 192, 152, 0.38);
+  color: #008767;
+}
+.table tbody td[data-type=currency] {
+  text-align: right;
+}
+.table tbody td[data-title]:before {
+  content: attr(data-title);
+  float: left;
+  font-size: 13px;
+  color: #b5b7c0;
+}
+@media (min-width: 768px) {
+  .table tbody td[data-title]:before {
+    content: none;
+  }
+}

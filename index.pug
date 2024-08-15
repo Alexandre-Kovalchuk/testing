@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./css/index.css")
+    title Document Title
+  body
+    .wrapper
+      include pug/aside.pug
+      main.main 
+        section.info
+          
+          .burger
+            .burger__icon 
+              span
+
+          .container
+            h1.info__title Hello Evano 👋🏼,
+
+            .info__content
+              .info__row 
+                .info__column 
+                  h2.info__sub-title All Customers
+                  p.info__text Active Members
+
+                .info__search 
+                  .info__search-icon 
+                    svg.aside__menu-icon
+                      use(xlink:href='../img/sprite.svg#search')
+                  input(type="text", placeholder="Search").info__search-inp  
+            
+              .info__table
+                include pug/table.pug
+                .info__line
+
+              .info__pagination 
+                .info__pagination-row 
+                  p.info__pagination-text Showing data 1 to 8 of  256K entries
+                  .info__pagination-item
+                    button.info__pagination-prev <
+                    button.info__pagination-number.info__pagination-number_active  1
+                    button.info__pagination-number 2
+                    button.info__pagination-number 3
+                    button.info__pagination-number 4
+                    span.info__pagination-dots ...
+                    button.info__pagination-number 40
+                    button.info__pagination-next >    
+        
+
+
+
+  script(type="module" src="./js/script.js")     
